@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Context context = this;
     private CardView buttonTransaction;
     private RequestQueue mRequestQueue;
-    private String url = "http://192.168.0.108:9000/api/precreate";
+    private String url = "http://192.168.0.106:9000/api/precreate";
     private ProgressDialog dialog;
     private HashMap<String,String> transactionPay;
 

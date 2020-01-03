@@ -45,7 +45,7 @@ public class QrScreen extends AppCompatActivity implements View.OnClickListener 
     private CardView buttonStatus;
     private HashMap<String,String> transactionPay;
     private RequestQueue mRequestQueue;
-    private String url = "http://192.168.0.108:9000/api/query";
+    private String url = "http://192.168.0.106:9000/api/query";
     private PrecreateDetails precreateDetails;
     private ImageView qrImage;
     private ImageLoader imageLoader;
