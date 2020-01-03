@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/grad_dusk_start</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- Edit Text Floating hint-->
+        <item name="colorControlNormal">@color/grad_start_dark</item>
+        <item name="colorControlActivated">@color/black_overlay</item>
+        <item name="colorControlHighlight">@color/grey</item>
+        <!-- /Edit Text Floating hint-->
+
+    </style>
+
+    <style name="Theme" parent="Theme.AppCompat.Light.NoActionBar" />
+
+    <style name="Theme.SplashTheme" parent="Theme">
+        <item name="android:windowDisablePreview">true</item>
+        <item name="colorPrimaryDark">@color/black_overlay</item>
+        <!-- change colorprimarydark to reflect status bar color -->
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+
+
+
+</resources>
