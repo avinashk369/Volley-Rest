@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.AdminLogin">
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar"
+        ></include>
+
+    <TextView
+        android:id="@+id/lbl"
+        android:layout_below="@+id/tool_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/purchase_card"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginLeft="@dimen/radius"
+        android:textSize="@dimen/twenty"
+        android:textColor="@color/black_overlay"
+        android:visibility="gone"
+        android:fontFamily="sans-serif-condensed-medium"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lbl"
+        android:layout_above="@+id/keyboard"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/pin_lbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_pin"
+            android:textSize="@dimen/twenty"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/black_overlay"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/pin_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/thirty"
+            android:layout_below="@+id/pin_lbl"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_marginRight="@dimen/twenty"
+            android:layout_marginLeft="@dimen/twenty"
+            android:layout_marginBottom="@dimen/ten"
+            app:cardElevation="5dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/eighteen"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ic_fiber_pin_black_24dp" />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    android:background="@color/black_overlay"/>
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColorHint="@color/black_overlay"
+                    android:textColor="@color/black"
+                    android:hint="@string/password"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="@dimen/eighteen"
+                    android:inputType="numberPassword"
+                    android:maxLength="4"
+                    android:background="@null"/>
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_admin_password"
+            android:textSize="@dimen/twenty"
+            android:gravity="center"
+            android:layout_below="@id/pin_layout"
+            android:textColor="@color/black_overlay"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+    </RelativeLayout>
+
+
+
+    <com.techcamino.pay.alipay.widget.CardKeyboard
+        android:id="@+id/keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@+id/footer"/>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/grad_dusk_start"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/action_footer"
+            android:textSize="@dimen/twenty"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

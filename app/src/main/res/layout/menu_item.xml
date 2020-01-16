@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.MainActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+                <androidx.cardview.widget.CardView
+
+                    android:id="@+id/buttonTransaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="@dimen/thirty"
+                    android:layout_marginTop="@dimen/ten"
+                    android:layout_marginBottom="@dimen/twenty"
+                    android:layout_marginLeft="@dimen/ten"
+                    android:layout_marginRight="@dimen/ten"
+                    app:cardElevation="5dp"
+                    app:cardBackgroundColor="@color/menu_item">
+
+                        <TextView
+                            android:id="@+id/menuName"
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:text="@string/enter_merchant_password"
+                            android:layout_margin="@dimen/activity_horizontal_margin"
+                            android:textSize="@dimen/text_italic"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:fontFamily="sans-serif-condensed-medium" />
+                </androidx.cardview.widget.CardView>
+
+
+
+        </RelativeLayout>
+
+</RelativeLayout>

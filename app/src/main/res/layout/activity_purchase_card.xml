@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.PurchaseCard">
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/toolbar"
+        ></include>
+
+    <TextView
+        android:id="@+id/lbl"
+        android:layout_below="@+id/tool_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/purchase_card"
+        android:layout_marginTop="@dimen/ten"
+        android:layout_marginLeft="@dimen/radius"
+        android:textSize="@dimen/twenty"
+        android:textColor="@color/black_overlay"
+        android:visibility="gone"
+        android:fontFamily="sans-serif-condensed-medium"/>
+
+    <LinearLayout
+        android:id="@+id/amt_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/twenty"
+        android:layout_below="@+id/tool_bar"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/amount_lbl"
+            android:layout_marginRight="@dimen/ten"
+            android:textSize="@dimen/twenty"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textStyle="bold"
+            android:gravity="right"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                app:srcCompat="@drawable/ic_attach_money_black_24dp"/>
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textSize="@dimen/twenty"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed-medium"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=".00"
+                android:visibility="gone"
+                android:textSize="@dimen/twenty"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed-medium"/>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_margin="@dimen/twenty"
+        android:layout_below="@+id/amt_layout"
+        android:layout_above="@+id/footer">
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="@dimen/ten"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/buttonTransaction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/ten"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/white">
+                <ImageView
+                    android:id="@+id/swipe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/swipe"/>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/swipe"
+                android:layout_marginTop="@dimen/ten"
+                android:textSize="@dimen/twenty"
+                android:textColor="@color/black_overlay"
+                android:fontFamily="sans-serif-condensed-medium"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="@dimen/ten"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/ten"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="5dp">
+                <ImageView
+                    android:id="@+id/insert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/insert"/>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/insert"
+                android:layout_marginTop="@dimen/ten"
+                android:textSize="@dimen/twenty"
+                android:textColor="@color/black_overlay"
+                android:fontFamily="sans-serif-condensed-medium"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="@dimen/ten"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/ten"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="5dp">
+                <ImageView
+                    android:id="@+id/tap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/tap"/>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tap"
+                android:layout_marginTop="@dimen/ten"
+                android:textSize="@dimen/twenty"
+                android:textColor="@color/black_overlay"
+                android:fontFamily="sans-serif-condensed-medium"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/grad_dusk_start"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/more_option"
+            android:textSize="@dimen/twenty"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-condensed-medium"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

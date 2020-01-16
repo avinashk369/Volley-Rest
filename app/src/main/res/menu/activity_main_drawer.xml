@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/refund"
+        android:icon="@drawable/ic_swap_horiz_black_24dp"
+        android:title="@string/refund" />
+    <item
+        android:id="@+id/cancel_transaction"
+        android:icon="@drawable/ic_cancel_black_24dp"
+        android:title="@string/cancel_trans" />
+    <item
+        android:id="@+id/authorization"
+        android:icon="@drawable/ic_verified_user_black_24dp"
+        android:title="@string/authorization" />
+    <item
+        android:id="@+id/purchase_advice"
+        android:icon="@drawable/ic_lightbulb_outline_black_24dp"
+        android:title="@string/purchase_advice" />
+    <item
+        android:id="@+id/settlement"
+        android:icon="@drawable/ic_sync_black_24dp"
+        android:title="@string/settlement" />
+    <item
+        android:id="@+id/network_login"
+        android:icon="@drawable/account"
+        android:title="@string/network_login" />
+    <item
+        android:id="@+id/merchant_menu"
+        android:icon="@drawable/account"
+        android:title="@string/merchant_menu" />
+    <item
+        android:id="@+id/admin_menu"
+        android:icon="@drawable/account"
+        android:title="@string/admin_menu" />
+
+
+
+</menu>
