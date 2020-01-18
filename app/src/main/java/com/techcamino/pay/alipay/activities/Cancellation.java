@@ -26,7 +26,7 @@ public class Cancellation extends AppCompatActivity implements View.OnClickListe
 
     private Context context = this;
     private String amount;
-    private TextView amountText;
+    private TextView amountText,title;
     private EditText editText;
     private CardView clear,pay;
     private CardKeyboard keyboard;
@@ -52,6 +52,8 @@ public class Cancellation extends AppCompatActivity implements View.OnClickListe
 
         keyboard = (CardKeyboard) findViewById(R.id.keyboard);
         clear = keyboard.findViewById(R.id.btn_y);
+        title = findViewById(R.id.title);
+        title.setText(R.string.cancel_trans_lbl);
         pay = keyboard.findViewById(R.id.btn_z);
 
         pay.setOnClickListener(this);
@@ -66,7 +68,7 @@ public class Cancellation extends AppCompatActivity implements View.OnClickListe
     private void initToolbar(){
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(R.string.cancel_trans_lbl);
+        getSupportActionBar().setTitle(null);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_24dp);

@@ -11,6 +11,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.techcamino.pay.alipay.R;
@@ -29,6 +30,7 @@ public class AdminMenu extends AppCompatActivity implements MenuItemAdapter.Cust
     private GridLayoutManager gridLayoutManager;
     private AlertDialog dialog,progressDialog;
     private ViewGroup viewGroup;
+    private TextView title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,13 +46,15 @@ public class AdminMenu extends AppCompatActivity implements MenuItemAdapter.Cust
         dialog = Util.getCustomDialog(this, viewGroup);
         progressDialog = Util.getProgressDialog(context,viewGroup, Constants.PLEASE_WAIT);
         adminMenuList = findViewById(R.id.admin_menu);
+        title = findViewById(R.id.title);
+        title.setText(R.string.admin_menu_lbl);
     }
 
 
     private void initToolbar(){
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(R.string.admin_menu_lbl);
+        getSupportActionBar().setTitle(null);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_24dp);

@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,6 +35,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
     CurrencyEditText etInput;
     private CardView clear,pay;
     private NumberKeyboard keyboard;
+    private TextView title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +44,7 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Purchase");
+        getSupportActionBar().setTitle(null);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -86,6 +88,8 @@ public class Dashboard extends AppCompatActivity implements NavigationView.OnNav
         keyboard = (NumberKeyboard) findViewById(R.id.keyboard);
         clear = keyboard.findViewById(R.id.btn_c);
         pay = findViewById(R.id.pay);
+        title = findViewById(R.id.title);
+        title.setText("Purchase");
 
         pay.setOnClickListener(this);
         clear.setOnClickListener(this);

@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -26,6 +27,7 @@ public class RefundTransaction extends AppCompatActivity implements View.OnClick
     CurrencyEditText etInput;
     private CardView clear,pay;
     private NumberKeyboard keyboard;
+    private TextView title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +64,8 @@ public class RefundTransaction extends AppCompatActivity implements View.OnClick
         keyboard = (NumberKeyboard) findViewById(R.id.keyboard);
         clear = keyboard.findViewById(R.id.btn_c);
         pay = findViewById(R.id.pay);
+        title = findViewById(R.id.title);
+        title.setText(R.string.refund_lbl);
 
         pay.setOnClickListener(this);
         clear.setOnClickListener(this);
@@ -75,7 +79,8 @@ public class RefundTransaction extends AppCompatActivity implements View.OnClick
     private void initToolbar(){
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(R.string.refund_lbl);
+        getSupportActionBar().setTitle(null);
+
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_24dp);

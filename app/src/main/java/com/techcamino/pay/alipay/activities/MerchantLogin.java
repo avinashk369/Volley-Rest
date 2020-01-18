@@ -27,7 +27,7 @@ public class MerchantLogin extends AppCompatActivity implements View.OnClickList
 
     private Context context = this;
     private String amount;
-    private TextView amountText;
+    private TextView amountText,title;
     private EditText editText;
     private CardView clear,pay;
     private CardKeyboard keyboard;
@@ -58,6 +58,9 @@ public class MerchantLogin extends AppCompatActivity implements View.OnClickList
         clear = keyboard.findViewById(R.id.btn_y);
         pay = keyboard.findViewById(R.id.btn_z);
 
+        title = findViewById(R.id.title);
+        title.setText(R.string.merchant_login);
+
         pay.setOnClickListener(this);
         clear.setOnClickListener(this);
 
@@ -70,7 +73,7 @@ public class MerchantLogin extends AppCompatActivity implements View.OnClickList
     private void initToolbar(){
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle(R.string.merchant_login);
+        getSupportActionBar().setTitle(null);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_arrow_back_black_24dp);

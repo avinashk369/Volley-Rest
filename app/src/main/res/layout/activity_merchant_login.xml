@@ -10,6 +10,22 @@
         layout="@layout/toolbar"
         ></include>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tool_bar"
+        android:background="@color/black_overlay">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:text="@string/app_name"
+            android:layout_margin="@dimen/ten"
+            android:textSize="@dimen/eighteen"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/lbl"
         android:layout_below="@+id/tool_bar"
